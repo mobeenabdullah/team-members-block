@@ -51,6 +51,7 @@ function Edit(_ref) {
     onChange: onChangeColumns
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
     allowedBlocks: ['blocks-course/team-member'],
+    orientation: "horizontal",
     template: [['blocks-course/team-member'], ['blocks-course/team-member'], ['blocks-course/team-member']]
   }));
 }
