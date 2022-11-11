@@ -5,9 +5,9 @@ import {
 } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { isBlobURL } from '@wordpress/blob';
-import { Spinner } from '@wordpress/components';
+import { Spinner, withNotices } from '@wordpress/components';
 
-export default function Edit({ attributes, setAttributes }) {
+function Edit({ attributes, setAttributes, noticeOperations, noticeUI }) {
 	const { name, bio, url, alt } = attributes;
 	const onChangeName = (newName) => {
 		setAttributes({ name: newName });
@@ -29,6 +29,12 @@ export default function Edit({ attributes, setAttributes }) {
 	const onSelectURL = (newURL) => {
 		setAttributes({ url: newURL, id: undefined, alt: '' });
 	};
+
+	const onUploadError = (message) => {
+		noticeOperations.removeAllNotices();
+		noticeOperations.createErrorNotice(message);
+	};
+
 	return (
 		<div {...useBlockProps()}>
 			{url && (
@@ -46,10 +52,11 @@ export default function Edit({ attributes, setAttributes }) {
 				icon="admin-users"
 				onSelect={onSelectImage}
 				onSelectURL={onSelectURL}
-				onError={(err) => console.log(err)}
-				accept="image/*"
+				onError={onUploadError}
+				// accept="image/*"
 				allowedTypes={['image']}
 				disableMediaButtons={url}
+				notices={noticeUI}
 			/>
 			<RichText
 				placeholder={__('Member Name', 'team-member')}
@@ -68,3 +75,5 @@ export default function Edit({ attributes, setAttributes }) {
 		</div>
 	);
 }
+
+export default withNotices(Edit);
