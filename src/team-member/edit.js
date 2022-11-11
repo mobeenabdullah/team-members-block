@@ -47,13 +47,12 @@ function Edit({ attributes, setAttributes, noticeOperations, noticeUI }) {
 					{isBlobURL(url) && <Spinner />}
 				</div>
 			)}
-			{/* eslint-disable */}
 			<MediaPlaceholder
 				icon="admin-users"
 				onSelect={onSelectImage}
 				onSelectURL={onSelectURL}
 				onError={onUploadError}
-				// accept="image/*"
+				accept="image/*"
 				allowedTypes={['image']}
 				disableMediaButtons={url}
 				notices={noticeUI}
