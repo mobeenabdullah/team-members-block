@@ -224,7 +224,7 @@ function Edit({
 					value={bio}
 					allowedFormats={[]}
 				/>
-				<div className="wp-block-blocks-team-member-social-links">
+				<div className="wp-block-blocks-course-team-member-social-links">
 					<ul>
 						{socialLinks.map((item, index) => {
 							return (
