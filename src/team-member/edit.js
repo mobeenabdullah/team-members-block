@@ -198,7 +198,7 @@ function Edit({
 
 	useEffect(
 		() => {
-			if (url && !prevURL) {
+			if (url && !prevURL && isSelected) {
 				titleRef.current.focus();
 			}
 		},
