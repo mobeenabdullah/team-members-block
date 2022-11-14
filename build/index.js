@@ -5819,13 +5819,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     socialLinks: {
       type: 'array',
-      default: [{
-        link: 'https://instagram.com',
-        icon: 'instagram'
-      }, {
-        link: 'https://twitter.com',
-        icon: 'twitter'
-      }],
+      default: [],
       source: 'query',
       selector: '.wp-block-blocks-course-team-member-social-links ul li',
       query: {

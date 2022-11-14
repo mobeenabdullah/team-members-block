@@ -19,5 +19,44 @@
 			"type": "number",
 			"default": 2
 		}
+	},
+	"example": {
+		"attributes": {
+			"columns": 2
+		},
+		"innerBlocks": [
+			{
+				"name": "blocks-course/team-member",
+				"attributes": {
+					"name": "John Doe",
+					"bio": "John is a WordPress developer.",
+					"url": "https://s.w.org/images/core/5.3/Glacial_lakes,_Bhutan.jpg",
+					"socialLinks": [
+						{
+							"icon": "twitter"
+						},
+						{
+							"icon": "facebook"
+						}
+					]
+				}
+			},
+			{
+				"name": "blocks-course/team-member",
+				"attributes": {
+					"name": "Jane Doe",
+					"bio": "Jane is a PHP developer.",
+					"url": "https://s.w.org/images/core/5.3/Glacial_lakes,_Bhutan.jpg",
+					"socialLinks": [
+						{
+							"icon": "twitter"
+						},
+						{
+							"icon": "facebook"
+						}
+					]
+				}
+			}
+		]
 	}
 }
